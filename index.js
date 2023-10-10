@@ -92,21 +92,48 @@ const predpoved = {
   },
 };
 
-const predpovedId = window.location.hash.slice(1);
-const predpovedData = predpoved[predpovedId];
 const cartaElement = document.querySelector('#carta');
 
 cartaElement.innerHTML += `
-  <article>
-    <h2>${predpovedData.den}</h2>
-    <p>Denni teplota: ${predpovedData.denni_teplota}</p>
-    <p>Ranni teplota: ${predpovedData.ranni_teplota}</p>
-    <p>Odpoledni teplota: ${predpovedData.odpoledni_teplota}</p>
-    <p>Vecerni teplota: ${predpovedData.vecerni_teplota}</p>
-    <p>Stav pocasi: ${predpovedData.stav_pocasi}</p>
-    <p>Tlak: ${predpovedData.tlak}</p>
-    <p>Rychlost vetru: ${predpovedData.rychlost_vetru}</p>
-    <p>Popis pocasi: ${predpovedData.popis_pocasi}</p>
+<h1>${predpoved.pondeli.den}</h1>
+<p>${predpoved.pondeli.denni_teplota}</p>
+<p>${predpoved.pondeli.stav_pocasi}</p>
+<a href="detail.html#pondeli">Přečíst celý článek</a>
+`;
+cartaElement.innerHTML += `
+<h1>${predpoved.utery.den}</h1>
+<p>${predpoved.utery.denni_teplota}</p>
+<p>${predpoved.utery.stav_pocasi}</p>
+<a href="detail.html#utery">Přečíst celý článek</a>
+`;
 
-  </article>
+cartaElement.innerHTML += `
+<h1>${predpoved.streda.den}</h1>
+<p>${predpoved.streda.denni_teplota}</p>
+<p>${predpoved.streda.stav_pocasi}</p>
+<a href="detail.html#streda">Přečíst celý článek</a>
+`;
+cartaElement.innerHTML += `
+<h1>${predpoved.ctvrtek.den}</h1>
+<p>${predpoved.ctvrtek.denni_teplota}</p>
+<p>${predpoved.ctvrtek.stav_pocasi}</p>
+<a href="detail.html#ctvrtek">Přečíst celý článek</a>
+`;
+cartaElement.innerHTML += `
+<h1>${predpoved.patek.den}</h1>
+<p>${predpoved.patek.denni_teplota}</p>
+<p>${predpoved.patek.stav_pocasi}</p>
+<a href="detail.html#patek">Přečíst celý článek</a>
+`;
+cartaElement.innerHTML += `
+<h1>${predpoved.sobota.den}</h1>
+<p>${predpoved.sobota.denni_teplota}</p>
+<p>${predpoved.sobota.stav_pocasi}</p>
+<a href="detail.html#sobota">Přečíst celý článek</a>
+`;
+cartaElement.innerHTML += `
+<h1>${predpoved.nedele.den}</h1>
+<p>${predpoved.nedele.denni_teplota}</p>
+<p>${predpoved.nedele.stav_pocasi} </p>
+<a href="detail.html#nedele">Přečíst celý článek</a>
 `;
